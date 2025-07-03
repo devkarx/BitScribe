@@ -8,8 +8,8 @@ export class Service{
 
         constructor() {
             this.client
-                .setEndpoint(appwriteUrl)
-                .setProject(appwriteProjectId)
+                .setEndpoint(conf.appwriteUrl)
+                .setProject(conf.appwriteProjectId)
             this.databases = new Databases(this.client);
             this.bucket= new Storage(this.client);
         }
@@ -78,7 +78,7 @@ export class Service{
             }
         }
 
-        async getPosts(queries=Query.equal("status","active")){
+        async getPosts(queries= [Query.equal("status","active")]){
             try {
                 return await this.databases.listDocuments( 
                 conf.appwriteDatabaseId,

@@ -7,6 +7,11 @@ import store from './store/store.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthLayout, Login } from './components/index.js'
 import SignUp from './components/Signup.jsx'
+import Home from './pages/Home.jsx'
+import AllPosts from './pages/AllPosts.jsx'
+import AddPost from './pages/AddPost.jsx'
+import EditPost from './pages/EditPost.jsx'
+import Post from './pages/Post.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +34,7 @@ const router = createBrowserRouter([
             path: "/signup",
             element: (
                 <AuthLayout authentication={false}>
-                    <Signup />
+                    <SignUp />
                 </AuthLayout>
             ),
         },

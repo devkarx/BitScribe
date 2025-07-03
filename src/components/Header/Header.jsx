@@ -6,7 +6,7 @@ import authService from '../../appwrite/auth'
 
 function Header() {
   const navigate = useNavigate()
-  const authStatus= useSelector((status)=>{state,auth.status} )
+  const authStatus= useSelector((state)=>{state.auth.status} )
   const navItems=[
     {
       name: "Home",

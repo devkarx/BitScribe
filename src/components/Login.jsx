@@ -49,9 +49,9 @@ function Login() {
                 type="email"
                 {...register("email", {
                     required: true,
-                    pattern: {
-                        value: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm,
-                        message: "Email address must be valid"
+                    validate: {
+                        mathPatern:(value)=> /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm.test(value) || 
+                        "Email address must be valid"
                     }
                 })}
                 />
@@ -62,10 +62,7 @@ function Login() {
                 placeholder="Password"
                 {...register("password",{
                     required: true,
-                    pattern: {
-                        value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm,
-                        message: "Chose a stronger Password"
-                    }
+            
                 })}
                 />
                 <Button type="submit" className="w-full" >Sign in</Button>
