@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import './App.css'
 import { useDispatch } from 'react-redux'
@@ -23,19 +22,16 @@ function App() {
     .finally(()=>{
       setLoading(false);
     })
-  
-    
   }, [])
   
   return !loading ? (
-    <div className='min-h-screen flex flex-wrap content-between items-center  bg-gray-400'>
-      <div className='w-full  '>
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-900'>
+      <div className='w-full'>
         <Header/>
-        <main>
-          TODO: <Outlet/>
+        <main className='pb-8'>
+          <Outlet/>
         </main>
         <Footer/>
-
       </div>
     </div>
   ) : null
