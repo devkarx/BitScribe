@@ -13,7 +13,7 @@ const authSlice= createSlice({
         login: (state, action) => {
     console.log("Login action payload:", action.payload);
     state.status = true;
-    state.userData = action.payload; // Try this first
+    state.userData = action.payload; 
 },
 
         logout:(state)=>{
