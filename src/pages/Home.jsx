@@ -6,6 +6,8 @@ function Home() {
     const [posts, setPosts] = useState([])
     useEffect(() => {
         appwriteService.getPosts().then((posts)=>{
+                console.log("received posts", posts);
+
           if (posts) {
               setPosts(posts.documents)
           }
@@ -26,7 +28,7 @@ function Home() {
         <Container>
             <div className="flex">
                 {posts.map((post)=>{
-                    <div key={post.$id} className="p-2">
+                    <div key={post.id} className="p-2">
                         <PostCard {...post} />
                     </div>
                 })}
