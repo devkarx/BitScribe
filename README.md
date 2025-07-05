@@ -43,9 +43,13 @@ git clone https://github.com/devkarx/BitScribe.git
 cd BitScribe
 ```
  2. Install Dependencies
-    npm install
-    # or
-    yarn
+    ```bash
+npm install
+
+# or
+
+yarn
+```
 
 3. Configure Environment
    Create a .env file in the root of the project and configure your Appwrite project credentials:
@@ -58,9 +62,14 @@ VITE_APPWRITE_BUCKET_ID="685e99f30002195f2da6"
 `` 
 
 5. Start Development Server
-   npm run dev
-   # or
-   yarn dev
+ ```bash
+npm run dev
+
+# or
+
+yarn dev
+```
+
    
 ## License  
 This project is licensed under the MIT License.
