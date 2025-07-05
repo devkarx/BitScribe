@@ -43,11 +43,9 @@ git clone https://github.com/devkarx/BitScribe.git
 cd BitScribe
 ```
  2. Install Dependencies
-    ```bash
+   ```bash
 npm install
-
 # or
-
 yarn
 ```
 
